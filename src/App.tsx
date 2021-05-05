@@ -1,23 +1,28 @@
-import React, { FC, useState } from 'react';
-import Navigation from 'components/Navigation';
+import React, { FC } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Dashboard from './pages/Dashboard';
 import GlobalStyles from './components/GlobalStyles';
 import 'assets/theme/theme.scss';
-import Contents from './pages/Contents';
+import 'assets/theme/MaterialUITheme';
+import PageWrapper from 'components/PageWrapper';
+import TopNavigation from 'components/TopNavigation';
+import Dashboard from './pages/Dashboard';
+import Rooms from './pages/Rooms';
+import useTheme from './hooks/useTheme';
 
 const App: FC = () => {
-  const [theme, setTheme] = useState('theme-pf');
+  const { theme } = useTheme();
+
   return (
     <div id="app" className={theme}>
       <GlobalStyles />
       <BrowserRouter>
-        <Navigation />
-        <Contents>
+        <TopNavigation />
+        <PageWrapper>
           <Switch>
-            <Route path="/dashboard" component={Dashboard} exact={true}></Route>
+            <Route path="/" component={Dashboard} exact={true}></Route>
+            <Route path="/rooms" component={Rooms} exact={true}></Route>
           </Switch>
-        </Contents>
+        </PageWrapper>
       </BrowserRouter>
     </div>
   );

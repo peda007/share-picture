@@ -1,8 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
-import { Link, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { IoMdLogOut } from 'react-icons/all';
-import Dashboard from '../pages/Dashboard';
 
 const NavTopArea = styled.nav`
   display: flex;
@@ -37,14 +36,7 @@ const LogoutButton = styled(Link)`
   align-items: center;
 `;
 
-const NavLeftArea = styled.div`
-  display: inline-block;
-  background-color: var(--color-main-contents);
-  width: 200px;
-  height: calc(100vh - 38px);
-`;
-
-const Navigation: FC = () => {
+const TopNavigation: FC = () => {
   return (
     <>
       <NavTopArea>
@@ -58,12 +50,8 @@ const Navigation: FC = () => {
           </LogoutButton>
         </ProfileImageArea>
       </NavTopArea>
-
-      <NavLeftArea>
-        <Link to="/dashboard">Dashboard</Link>
-      </NavLeftArea>
     </>
   );
 };
 
-export default Navigation;
+export default TopNavigation;
