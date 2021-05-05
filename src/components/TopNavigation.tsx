@@ -11,7 +11,7 @@ const NavTopArea = styled.nav`
 `;
 
 const LogoButton = styled(Link)`
-  color: var(--color-main-background);
+  color: var(--color-font-reverse);
   display: flex;
   align-items: center;
 `;
@@ -21,7 +21,7 @@ const ProfileImageArea = styled.div`
   width: 8rem;
   justify-content: space-around;
   align-items: center;
-  color: var(--color-main-background);
+  color: var(--color-font-reverse);
 `;
 
 const ProfileImage = styled.div`

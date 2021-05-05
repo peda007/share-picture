@@ -17,7 +17,7 @@ const Dashboard: FC = () => {
     <>
       <h1>대시보드</h1>
       <div>
-        <Button variant="contained" onClick={changeTheme}>
+        <Button variant="contained" color="primary" onClick={changeTheme}>
           테마 변경
         </Button>
       </div>

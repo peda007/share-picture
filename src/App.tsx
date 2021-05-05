@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import GlobalStyles from './components/GlobalStyles';
 import 'assets/theme/theme.scss';
-import 'assets/theme/MaterialUITheme';
+import 'assets/theme/material';
 import PageWrapper from 'components/PageWrapper';
 import TopNavigation from 'components/TopNavigation';
 import Dashboard from './pages/Dashboard';
