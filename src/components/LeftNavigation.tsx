@@ -6,7 +6,7 @@ const NavLeftArea = styled.div`
   display: flex;
   flex-basis: 200px;
 
-  background-color: var(--color-main-contents);
+  background-color: ${({ theme }) => theme.subColor};
   height: calc(100vh - 38px);
 `;
 
